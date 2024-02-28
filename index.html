@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Rubik:ital,wght@0,300..900;1,300..900&family=Yomogi&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h id="title">タイピング　×　福井県史　×　英語</h>
+    <canvas id="timelineCanvas" width="800" height="43"></canvas>
+
+    <div id="yeartab" class="typeFlame">
+        <div id="dateId" class="date"></div>
+        <div id="word" class="word"></div>
+        <div id="info" class="info"></div>
+
+        <button id="next" class="nextButton">次へ</button>
+        <button id="fin" class="finButton">やめる</button>
+        <div id="goannnai" class="title">タイピング　×　福井県史　×　英語</div>
+
+        <div id="setumei" class="setumei">
+            <br><br>
+            ＜本サイトについて＞<br>
+            <li>英文のタイピングを楽しみながら、福井県史を学べるページです。</li>
+            <li>福井県史には、福井県文書館のオープンデータを使用しています。
+                <a
+                    href="https://www.library-archives.pref.fukui.lg.jp/fukui/07/nenpyo/rekishi/dataset.html">出典：「福井県史年表データセット」（福井県文書館）</a>
+            </li>
+            <li>1900~1995年の出来事の中からランダムに５問が出題されます。</li>
+            <li>英文への翻訳はChatGPTおよびDeepLにより行っているため、人名や地名等の読み方に誤りがある場合があります。また、翻訳自体が間違っている場合もあります。</li>
+        
+        <button id="letsgo" class="goButton">はじめる</button></div>
+
+        <div id="result"> </div>
+
+
+    </div>
+
+    <script defer src="readTextcsv.js"></script>
+    <script>
+        window.onload = function () {
+            document.getElementById("title").style.display = "none";
+            document.getElementById("dateId").style.display = "none";
+            document.getElementById("word").style.display = "none";
+            document.getElementById("info").style.display = "none";
+            document.getElementById("next").style.display = "none";
+            document.getElementById("fin").style.display = "none";
+            document.getElementById("footer").style.display = "none";
+            document.getElementById("timelineCanvas").style.display = "none";
+        }
+    </script>
+
+
+</body>
+
+</html>
